@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230226 19:53:18.521" rpa="false" schemaversion="3">
+<suite id="s1" name="Test1" source="C:\Users\raysa\OneDrive\Documentos\meusprojetos\ROBOTFRAMEWORKFIRSTTEST\test1.robot">
+<test id="s1-t1" name="Caso de teste Exemplo" line="7">
+<kw name=" Acessar a página da amazon" library="resource1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230226 19:53:19.086" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com.br'.</msg>
+<status status="PASS" starttime="20230226 19:53:19.086" endtime="20230226 19:53:25.376"/>
+</kw>
+<status status="PASS" starttime="20230226 19:53:19.086" endtime="20230226 19:53:25.378"/>
+</kw>
+<kw name="Pesquisar por celulares" library="resource1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=id:twotabsearchtextbox</arg>
+<arg>text=celulares</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 19:53:25.378" level="INFO">Typing text 'celulares' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230226 19:53:25.378" endtime="20230226 19:53:25.727"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=id:nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230226 19:53:25.727" level="INFO">Clicking element 'id:nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20230226 19:53:25.727" endtime="20230226 19:53:25.968"/>
+</kw>
+<status status="PASS" starttime="20230226 19:53:25.378" endtime="20230226 19:53:25.968"/>
+</kw>
+<kw name="Validar o resultado" library="resource1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=RESULTADOS</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230226 19:53:25.970" endtime="20230226 19:53:27.472"/>
+</kw>
+<status status="PASS" starttime="20230226 19:53:25.968" endtime="20230226 19:53:27.472"/>
+</kw>
+<status status="PASS" starttime="20230226 19:53:19.085" endtime="20230226 19:53:27.472"/>
+</test>
+<doc>Teste Exemplo</doc>
+<status status="PASS" starttime="20230226 19:53:18.528" endtime="20230226 19:53:27.472"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
